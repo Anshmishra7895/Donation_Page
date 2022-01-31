@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occasional Donor</title>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300&display=swap');">
+</head>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: poppins;
+        overflow-x: hidden;
+    }
+    section{
+        background: url("books.jpg");
+        background-size: cover ;
+        background-attachment: fixed;
+        /* background-position: ; */
+    }
+    .main{
+        width: 100%;
+        /* margin: 100px auto 40px auto; */
+    }
+    h2{
+        text-align: center;
+        padding: 20px;
+        font-family: sans-serif;
+        font-size: 35px;
+    }
+    .register{
+        /* background-color: rgba(0, 0, 0, 0.6); */
+        background: rgba(255,255, 255,0.1);
+        backdrop-filter: blur(30px);
+        width: 100%;
+        font-size: 23px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        color: #fff;
+    }
+    #register{
+        /* margin: auto; */
+        /* margin-left: 120px;
+        margin-top: 40px; */
+        text-align: center; 
+        /* border: 2px solid blue ; */
+        /* margin-right: 100px; */
+    }
+
+    .citi{
+        /* border: 2px solid blue ; */
+        margin-right: 200px;  
+    }
+
+    label{
+        font-family: sans-serif;
+        font-size: 15px;
+        /* font-style: italic; */
+    }
+    #name{
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        outline: 0;
+        padding: 7px;
+        background-color: #fff;
+        box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3) ;
+    }
+    #submit{
+        width: 200px;
+        margin-left: 160px;
+        padding: 7px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 3px;
+        background-color: rgba(31, 146, 16, 0.8);
+        color: #fff;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    label,span,h2{
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    form, input, select, textarea, label, p2, p1 { 
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    line-height: 22px;
+    }
+
+    option{
+      color: #555;
+    }
+    input{
+      color: #555;
+    }
+    select{
+      color: #555;
+    }
+
+    .volunteer{
+        min-height: 100%;
+        margin: 10px;
+        }
+        .volunteer{ 
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 16px;
+        color: #fff;
+        line-height: 22px;
+        }
+
+    p2{
+        font-size: 20px;
+    }
+    
+    #one{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    h1 {
+    position: absolute;
+    margin: 0;
+    font-size: 40px;
+    color: #fff;
+    z-index: 2;
+    line-height: 83px;
+    }
+    .testbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding: 20px;
+    }
+    form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    /* background: #fff; */
+    background: rgba(255,255, 255,0.1);
+        backdrop-filter: blur(30px);
+    }
+
+    .volunteer input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    }
+    input[type="date"] {
+    padding: 4px 5px;
+    }
+    textarea {
+    width: calc(100% - 12px);
+    padding: 5px;
+    }
+
+    .item {
+    position: relative;
+    margin: 10px 0;
+    }
+
+    input[type=radio], input[type=checkbox]  {
+    display: none;
+    }
+    label.radio {
+    position: relative;
+    display: inline-block;
+    margin: 5px 20px 15px 0;
+    cursor: pointer;
+    }
+    .question span {
+    margin-left: 30px;
+    }
+    .question-answer label {
+    display: block;
+    }
+    label.radio:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    }
+
+    label.radio:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 8px;
+    height: 4px;
+    border: 3px solid rgb(66, 167, 66);
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+    }
+    input[type=radio]:checked + label:after {
+    opacity: 1;
+    }
+    .btn-block {
+    margin-top: 10px;
+    text-align: center;
+    }
+    button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; 
+    background: rgb(66, 167, 66);
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    }
+    button:hover {
+    background: rgb(53, 143, 53);
+    }
+    .heading{
+        font-size: 25px;
+        text-align: center;
+        margin: auto;
+        /* border: 2px solid red;  */
+    }
+    .video{
+        /* margin: 100px; */
+        margin-left: 150px;
+        /* border: 2px solid red; */
+        margin-bottom: 20px;
+        margin-top: 20px;
+        /* margin: 20px auto 20px; */
+    }
+    .dd{
+        text-align: center;
+        font-size: 20px;
+        color: #555;
+        flex-basis: 40%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 20px;
+        box-shadow: 0px 0px 5px #555;
+    }
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .legal{
+      /* border: 2px solid red; */
+      margin: 30px auto 30px;
+      font-size: 20px;
+      color: #555;
+      text-align: center;
+      padding: 10px 20px 20px 10px  ;
+    }
+
+
+    @media (max-width: 568px) {
+      .dd{
+        /* flex-basis: 90%; */
+        /* padding: 0; */
+        width: 90%;
+        /* margin-left: 25px; */
+        margin: auto;
+        /* padding-top: 30px; */
+        margin-top: 20px;
+      }
+      .info{
+        display: inline-block;
+        /* margin-right: 10px; */
+        /* border: 2px solid red; */
+        margin-top: 20px;
+        padding-top: 30px;
+        /* padding: 0; */
+      }
+
+      .video{
+        width: 90%;
+        /* margin: auto; */
+        /* min-height: auto; */
+        min-height: fit-content;
+        /* border: 2px solid green; */
+        margin: 20px auto 20px;
+      }
+      iframe{
+          width: 100%;
+      }
+      .legal{
+        font-size: 15px;
+      }
+    }
+
+</style>
+
+<body>
+    
+  <section class="sec">
+    <div class="main">
+        <div class="register">
+            <h2>Donate Here</h2>
+           
+            <div class="volunteer">
+                <div class="testbox">
+                  <form action="/">
+            
+                    <br>
+                    <div id="one">
+                    <p2 style="font-size: 20px;"><b>Donation Details</b></p2></div>
+                    <br>
+                    
+                    <div class="question">
+                        <label>Citizenship<span1>*</span1></label>
+                        <div class="question-answer">
+                          <div>
+                            <input type="radio" value="none" id="radio_1" name="gender" required/>
+                            <label for="radio_1" class="radio"><span>Indian Donor</span></label>
+                          </div>
+                          <div>
+                            <input  type="radio" value="none" id="radio_2" name="gender" required/>
+                            <label for="radio_2" class="radio"><span>Foreign Donor</span></label>
+                          </div>
+                        </div>
+                      </div>
+            
+                      <div class="item">
+                        <label for="address">Are you a Occasional donor ?<span>*</span></label>
+                        <input id="address" type="address" name="address" required/ placeholder="Please type your Occasion">
+                      </div>
+            
+                      <div class="col">
+                        <div class="item">
+                          <p1>I would like to Donate<span>*</span></p1><br>
+                          <select required>
+                            <option selected value="" disabled selected></option>
+                            <option value="">1000</option>
+                            <option value="">2000</option>
+                            <option value="">3000</option>
+                            <option value="">4000</option>
+                            <option value="">5000</option>
+                            <option value="">6000</option>
+                            <option value="">7000</option>
+                            <option value="">8000</option>
+                            <option value="">9000</option>
+                            <option value="">10000</option>
+                            <option value="">11000</option>
+                            <option value="">15000</option>
+                            <option value="">21000</option>
+                            <option value="">25000</option>
+                            <option value="">30000</option>
+                            <option value="">51000</option>
+                          </select>
+                        </div> 
+                      </div>
+        
+                      <div id="one">
+                        <p2 style="text-align: center;"><b>Donor Details</b></p2></div>
+                        <div class="row">
+                            <div class="col">
+                              <div class="item">
+                                <label for="fname">First Name<span>*</span></label>
+                                <input id="fname" type="text" name="fname" required/>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="item">
+                                <label for="lname">Last Name<span>*</span></label>
+                                <input id="lname" type="text" name="lname" required/>
+                              </div>
+                            </div>
+                          </div>    
+                        <div class="row">
+                            <div class="col">
+                              <div class="item">
+                                <label for="phone">Phone<span>*</span></label>
+                                <input id="phone" type="number" name="phone" required/>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="item">
+                                <label for="email">Email Address<span>*</span></label>
+                                <input id="email" type="email" name="email" required/>
+                              </div>
+                            </div>
+                          </div>
+                         <br>
+                        <div class="row">
+                          <div class="col">
+                            <div class="item">
+                              <label for="city">PAN Card<span>*</span></label>
+                              <input id="city" type="text" name="city" required/>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="item">
+                              <label for="state">Age<span>*</span></label>
+                              <input id="state" type="number" name="state" required/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="question">
+                            <label>Gender<span1>*</span1></label>
+                            <div class="question-answer">
+                              <div>
+                                <input type="radio" value="none" id="radio_1" name="gender" required/>
+                                <label for="radio_1" class="radio"><span>Male</span></label>
+                              </div>
+                              <div>
+                                <input  type="radio" value="none" id="radio_2" name="gender" required/>
+                                <label for="radio_2" class="radio"><span>Female</span></label>
+                              </div>
+                              <div>
+                                  <input type="radio" value="none" id="radio_3" name="gender" required/>
+                                  <label for="radio_3" class="radio"><span>Don't want to disclose</span></label>
+                                </div>
+                            </div>
+                          </div>
+                
+                      
+                
+                        <div class="btn-block">
+                          <button type="submit" href="/">SUBMIT</button>
+                        </div>
+                
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            
+        </div>
+    </div>
+</section>
+
+    <div class="info">
+    <div class="dd">
+        <h2>Donate with Cheque or DD</h2>
+        <!-- <p>If you would like to make your contribution by cheque or demand draft, please send your Company/Organization/Personal details, email, mobile no., phone no., address and PAN no., along with the cheque or draft (made in favour of Medlife Foundation Bahal) and mail it to: <br> <br> -->
+
+            Medlife Foundation Bahal, <br>
+            Medlife House, <br>
+            House.no-693, At/Post:Bahal,  <br>
+            Tal: Chalisgaon Dist: Jalgaon  <br>
+            Maharashtra, India – 424106  <br>
+            Ph. No.:02589-282313  <br>
+            Mob: +91-8275320465 / +91-7588646699 (Please inform us before making the donation :) <br>
+            Email: donation@medlifefoundation.org</p>
+    </div>
+    <div class="dd">
+        <h2>Donate via Bank Transfer</h2>
+        BANK TRANSFERS (Internet Banking/IMPS/NEFT/RTGS) <br> <br>
+        If you would like to make a bank transfer, please write to donation@medlifefoundation.org <br> <br>
+
+        Medlife Foundation Online Payment Details <br>
+
+        Account Name: Medlife Foundation, Bahal <br>
+        Account No: 0618104000091844 <br>
+        Branch: Khedgaon (Chalisgaon) <br>
+        Bank Name: IDBI Bank <br>
+        IFSC Code: IBKL0000618 <br>
+    </div>
+</div>
+
+      <hr size="2">
+
+  <div class="legal">
+    <p> If you would like to make your contribution by cheque or demand draft, please send your Company/Organization/Personal details, email, mobile no., phone no., address and PAN no., along with the cheque or draft (made in favour of Medlife Foundation Bahal) and mail it to: </p>
+
+    Medlife is registered as Medlife Foundation, a Non Governmental organization under the Bombay public charitable trust, 1950. (Reg. No. -1487/J, dtd. Feb 04, 2016), with the Bombay public charitable trust. <br>
+Medlife Foundation is registered u/s 12A of the Income Tax Act, 1961, and with the Director of Income Tax (Exemptions) u/s 80G, valid until 31/3/2026 (Approval no. AAETM4490LF20214 ) <br>
+
+PAN Card - AAETM4490L
+  </div>
+
+      <hr size="2">
+
+    <div class="video">
+        <iframe width="88%" height="430px" src="https://www.youtube.com/embed/b5XS1SZs1qU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+    </div>
+
+
+</body>
+</html>
+
+<!-- video width 560 and height 315 -->
